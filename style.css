@@ -1,0 +1,119 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #ff9a9e, #fecfef, #fad0c4);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Card Styling */
+.container {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  animation: slideIn 1s ease-out;
+}
+
+.card h1 {
+  font-size: 2.5em;
+  color: #ff6f61;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card p {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.card button {
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card button:hover {
+  background: #ff4c41;
+  transform: scale(1.1);
+}
+
+#response {
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#response h2 {
+  font-size: 2em;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+#response p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Background Animation */
+body::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.5) 10%, rgba(0,0,0,0) 60%);
+  animation: backgroundMove 10s linear infinite;
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes backgroundMove {
+  from {
+      transform: translate(0, 0);
+  }
+  to {
+      transform: translate(50%, 50%);
+  }
+}
